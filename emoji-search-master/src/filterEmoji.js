@@ -6,7 +6,7 @@ export default function filterEmoji(searchText, maxResults) {
       if (emoji.title.includes(searchText.toLowerCase())) {
         return true;
       }
-      if (emoji.keywords.includes(searchText)) {
+      if (!emoji.keywords.includes(searchText)) {
         return true;
       }
       return false;
